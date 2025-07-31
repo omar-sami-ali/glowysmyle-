@@ -1,0 +1,327 @@
+
+
+html,body{
+    font-family: sans-serif;
+    margin: 0;
+    background-color: azure;
+}
+.navbar{
+    width: 100%;
+    padding: 0px 40px;
+    background-color: rgb(251, 164, 213);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    animation: up-down 1s ease-in-out;
+    z-index: 1000;
+    position: fixed;
+    color: aliceblue;
+    top: 0;
+}
+.logo{
+    padding-left: 60px;
+    width: 90x;
+    height: 90px;
+    animation: logo 1.2s ease-in-out;
+}
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-weight: bold;
+
+}
+.nav-links li a {
+    position: relative;
+    color: rgb(20, 23, 29);
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3;
+    opacity: 0;
+    animation: up-down2 1s  forwards;
+}
+.nav-links li a::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: rgba(245, 40, 145, 0.64);
+    transition: width 0.3s;
+    right: 0;
+    bottom: -6px;
+}
+.nav-links li a:hover::after{
+    width: 100%;
+}
+.nav-links li a:hover{
+    color:rgb(255, 255, 255);
+}
+@keyframes up-down{
+    from{
+        transform: translateY(-90px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes logo{
+    0%{transform: scale(1);}
+    50%{transform: scale(1.1);}
+    100%{transform: scale(1);}
+}
+@keyframes up-down2{
+    from{
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.home{
+    background-image: url(../imgs/glowysmile-back-ground.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0 20px;
+    overflow: hidden;
+}
+.home::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.home-main{
+    position: relative;
+    z-index: 2;
+    color: white;
+    animation:  up-down2 1.5s ease-in-out;
+}
+.home-main h1{
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+.home-main p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.conract{
+    padding: 15px 25px ;
+    border: 0;
+    border-radius: 20px;
+    color:white ;
+    background-color: rgba(0, 0, 0, 0.719);
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+}
+.conract:hover{
+    background-color: black;
+}
+.Services{
+    padding: 0 20px;
+    background-color:azure;
+    text-align: center;
+}
+.services-title{
+    font-size: 35px;
+    color: black;
+    position: relative;
+}
+.services-intro{
+    font-size: 20px;
+    color: rgb(48, 48, 48);
+}
+
+.services-main{
+    margin: 30px 0;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+}
+.card{
+    width: 30%;
+    height: 300px;
+    display: flex;
+    flex-direction:column;
+    border: 0;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    padding: 5px;
+    transition: transform 0.5s ease-in-out;
+}
+.card h3{
+    font-size: 24px;
+    z-index: 2;
+}
+.card p{
+    font-size: 20px;
+    z-index: 2;
+}
+.card1{
+    background-image: url(../imgs/ـنظيف-اسنان.jpg);
+     background-size: cover;
+    background-position: center;
+}
+.card2{
+    background-image: url(../imgs/حشو-اسنان.jpg);
+     background-size: cover;
+    background-position: center;
+}
+.card3{
+    background-image: url(../imgs/تقويم-اسسنان.jpg);
+     background-size: cover;
+    background-position: center;
+}
+.card::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.Services .services-main .card:hover {
+      transform: scale(1.09);
+}
+.testimonials{
+    padding: 10px 20px;
+    background-color:aliceblue;
+    text-align: center;
+    margin: 5px 20px;
+}
+.testimonials-title h2{
+    font-size: 35px;
+    color: black;
+    position: relative; 
+}
+.testimonials-title p{
+    font-size: 20px;
+    color: rgb(48, 48, 48);  
+}
+.testimonials-main{
+    margin: 30px 0;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    padding-top: 25px;
+}
+.testimonial{
+    width: 30%;
+    height: 310px;
+    display: flex;
+    flex-direction:column;
+    border: 0;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    position: relative;
+    padding: 5px;
+    transition: transform 0.8s ease-in-out, box-shadow 0.3s ease-in-out; 
+}
+.testimonial img{
+    width: 65%;
+    height: 200px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    
+}
+.testimonial h3{
+    font-size: 22px;
+    font-weight: bold;
+}
+.testimonial p{
+    font-size: 19px;
+    padding: 8px 4px;
+}
+.testimonial:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 2px 3px rgba(128, 128, 128, 0.575);
+}
+.footer-top{
+    margin: 10px 0 0 0;
+    
+    background-color:rgb(251, 164, 213) ;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.footer-columns{
+    display: flex;
+    justify-content: space-around;
+    gap: 35px;
+
+}
+.footer-column{
+    width: 25%;
+    padding: 30px 0;
+}
+.footer-column ul{
+    list-style: none;
+}
+.footer-column h3{
+    padding-left: 52px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.footer-column hr{
+    border: none;
+    height: 2px;
+    background-color:rgba(245, 40, 146, 0.247);
+}
+.real-footer{
+    background-color:rgb(216, 115, 172) ;
+    margin-bottom: 0;
+    overflow-x: hidden;
+}
+.footer-logo{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    inset: 0;
+}
+.real-footer p{
+    text-align: center;
+    font-size: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.social-icons {
+  text-align: center;
+  padding: 10px;
+  padding-bottom: 30px;
+}
+
+.social-icons i {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #333;
+  transition: transform 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.social-icons i:hover {
+  color: #007bff;
+  transform: scale(1.2);
+}
+
